@@ -1,0 +1,26 @@
+{
+  "name": "HNK_Portfolio-GitHubCloneCoding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HongNyungKi/HNK_Portfolio-GitHubCloneCoding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HongNyungKi/HNK_Portfolio-GitHubCloneCoding/issues"
+  },
+  "homepage": "https://github.com/HongNyungKi/HNK_Portfolio-GitHubCloneCoding#readme"
+}
