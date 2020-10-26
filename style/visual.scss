@@ -1,0 +1,74 @@
+.section--visual {
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .inner {
+        padding: 160px 0;
+        display: flex;
+
+        .summary {
+            flex-basis: 0;
+            flex-grow: 1;
+            margin-right: 90px;
+
+            .summary__title {
+                color: $white;
+                font-size: 54px;
+                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25),
+                    0 1px 25px rgba(0, 0, 0, 0.75);
+            }
+
+            .summary__description {
+                color: $white;
+                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25),
+                    0 1px 25px rgba(0, 0, 0, 0.75);
+            }
+        }
+
+        #sign-form {
+            width: 340px;
+            margin-top: 16px;
+
+            li {
+                .input--text {
+                    width: 100%;
+                    height: 40px;
+                }
+
+                [type="submit"] {
+                    width: 100%;
+                    height: 60px;
+                    padding: 0 25px;
+                    font-size: 20px;
+                    justify-content: center;
+                    margin-top: 18px;
+                }
+
+                .caption {
+                    font-size: 12px;
+                    margin-top: 5px;
+                    color: rgba(255, 255, 255, 0.6);
+                    line-height: 1.5;
+                    text-align: center;
+                }
+            }
+
+            li:not(:nth-child(3)) {
+                margin-bottom: 17px;
+            }
+
+        }
+    }
+}

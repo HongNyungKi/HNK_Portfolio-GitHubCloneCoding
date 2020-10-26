@@ -1,3 +1,12 @@
+$white:#fff;
+$blue: #4078c0;
+$gray:#3c4146;
+$lightGray:#767676;
+
+* {
+    box-sizing: border-box;
+}
+
 .body__container {
     font-weight: 400;
     color: #333;
@@ -8,9 +17,33 @@ a {
     text-decoration: none;
 }
 
-$white:#fff;
-$blue: #4078c0;
-$gray:#3c4146;
+.section {
+    position: relative;
+
+    .inner {
+        max-width: 980px;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+
+.summary {
+    .summary__title {
+        font-size: 38px;
+        font-weight: 300;
+        line-height: 1.25;
+        margin-bottom: 18px;
+    }
+
+    .summary__description {
+        font-size: 26px;
+        font-weight: 300;
+        color: gray;
+        line-height: 1.5;
+    }
+}
+
+
 
 @mixin btn {
     font-size: 14px;
@@ -73,4 +106,16 @@ $gray:#3c4146;
         color: #cacaca
     }
 
+}
+
+.btn {
+    @include btn;
+}
+
+.btn--primary {
+    @include btn--primary;
+}
+
+.input--text {
+    @include input--text;
 }

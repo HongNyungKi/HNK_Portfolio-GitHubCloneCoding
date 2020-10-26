@@ -117,79 +117,32 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"map-api.js":[function(require,module,exports) {
+'use strict'; //이 js파일은 구글에서 제공하는 map관련 api를 통해 어느위치인지, 어떻게 나타낼건지 등을 함수에 정의한 것이다. 
+// 실행을 위해서는 외부 js를 호출하고 개인의 key를 입력하여 실행할것이다. 
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+function initMap() {
+  // 위도(Latitude), 경도(Longitude)
+  var myLatLng = {
+    lat: 37.782293,
+    lng: -122.391240
+  }; //구글 api를 통해 map을 정의하고자 함
+  //구글 maps객체에 들어있는 map함수를 실행한다. 함수의 인자로는 (맵삽입위치,맵표시옵션)
 
-  return bundleURL;
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    scrollwheel: false,
+    zoom: 18
+  }); //구글api를 통해 map에 표시할 maker를 정의하고자한다.
+  //지도가 어떤지도인지 설정하고, 제목을 설정한다.
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'GitHub'
+  });
 }
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"style/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\img\\logo.svg":[["logo.f1d8a4c6.svg","img/logo.svg"],"img/logo.svg"],"./..\\img\\logo_on.svg":[["logo_on.4da6d60c.svg","img/logo_on.svg"],"img/logo_on.svg"],"./..\\img\\bg.jpg":[["bg.c04a5f46.jpg","img/bg.jpg"],"img/bg.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +346,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/main.3d6386d6.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","map-api.js"], null)
+//# sourceMappingURL=/map-api.c9c33278.js.map
