@@ -377,6 +377,10 @@ footer {
     .tiles ul li {
       border-right: none;
       border-bottom: 1px solid #e5e5e5; }
+      .tiles ul li img {
+        width: 50%; }
+      .tiles ul li p {
+        padding: 0 50px; }
   .section--pricing .card {
     flex-direction: column; }
   footer .inner {
