@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\img\\logo.svg":[["logo.f1d8a4c6.svg","img/logo.svg"],"img/logo.svg"],"./..\\img\\logo_on.svg":[["logo_on.4da6d60c.svg","img/logo_on.svg"],"img/logo_on.svg"],"./..\\img\\bg.jpg":[["bg.c04a5f46.jpg","img/bg.jpg"],"img/bg.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\img\\logo.svg":[["logo.f1d8a4c6.svg","img/logo.svg"],"img/logo.svg"],"./..\\img\\logo_on.svg":[["logo_on.4da6d60c.svg","img/logo_on.svg"],"img/logo_on.svg"],"./..\\img\\bg.jpg":[["bg.c04a5f46.jpg","img/bg.jpg"],"img/bg.jpg"],"./..\\img\\toggle-btn.svg":[["toggle-btn.b7f2d702.svg","img/toggle-btn.svg"],"img/toggle-btn.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49944" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57959" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,0 +1,33 @@
+.section--pricing {
+
+    .inner {
+        padding: 80px 0;
+
+        .card {
+            display: flex;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+
+            .cell {
+                padding: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .cell1 {
+                .btn--primary {
+                    height: 40px;
+                }
+            }
+
+            .cell2 {
+                flex: 1;
+                border-left: 1px solid #e5e5e5;
+                font-size: 18px;
+                line-height: 1.2;
+            }
+        }
+    }
+}
