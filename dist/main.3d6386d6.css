@@ -111,13 +111,13 @@ header {
       header .inner .menu-group .logo {
         margin-right: 10px; }
         header .inner .menu-group .logo a {
-          background: url("/logo.f1d8a4c6.svg");
+          background: url("./logo.f1d8a4c6.svg");
           display: block;
           width: 32px;
           height: 32px;
           text-indent: -9999px; }
           header .inner .menu-group .logo a:hover {
-            background: url("/logo_on.4da6d60c.svg"); }
+            background: url("./logo_on.4da6d60c.svg"); }
       header .inner .menu-group .main-menu {
         display: flex; }
         header .inner .menu-group .main-menu a {
@@ -151,7 +151,7 @@ header {
             color: #4078c0; }
 
 .section--visual {
-  background-image: url("/bg.c04a5f46.jpg");
+  background-image: url("./bg.c04a5f46.jpg");
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: cover; }
@@ -338,7 +338,7 @@ footer {
     header.section .inner .toggle {
       display: none !important; }
     header.section .inner #toggle-btn {
-      background: url("/toggle-btn.b7f2d702.svg");
+      background: url("./toggle-btn.b7f2d702.svg");
       width: 18px;
       height: 24px;
       position: absolute;
